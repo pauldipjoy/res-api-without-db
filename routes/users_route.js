@@ -1,4 +1,4 @@
-const { getAllUsers , postAllUsers, updateUser, deleteUser} = require('../controllers/users_controller');
+const { getAllUsers , createUser, updateUser, deleteUser} = require('../controllers/users_controller');
 
 
 // const express = require('express');
@@ -8,7 +8,7 @@ const router= require('express').Router();
 // get users route
 router.get("/", getAllUsers );
  // post users store
-router.post("/", postAllUsers );
+router.post("/", createUser );
 // update or put users
 router.put("/:id", updateUser );
 // delete user
