@@ -7,7 +7,7 @@ const getAllUsers = (req, res) => {
 };
 
 // post new users
-const postAllUsers = (req, res) => {
+const createUser = (req, res) => {
   const newUser = {
     id: uuidv4(),
     username: req.body.username,
@@ -16,6 +16,7 @@ const postAllUsers = (req, res) => {
   users.push(newUser);
   res.status(201).json(users);
 };
+
 
 // update user
 const updateUser = (req, res) => {  
@@ -39,4 +40,4 @@ const userId = req.params.id;
   res.status(200).json(users);
 };
 
-module.exports = { getAllUsers, postAllUsers, updateUser, deleteUser };
+module.exports = { getAllUsers, createUser, updateUser, deleteUser };
